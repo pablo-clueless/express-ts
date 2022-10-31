@@ -1,4 +1,4 @@
-# Node modules
+# modules
 node_modules
 
 # env
@@ -6,6 +6,5 @@ node_modules
 .env.local
 .env.production
 
-# images
-uploads
-node_modules
+# build
+dist

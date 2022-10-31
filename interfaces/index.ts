@@ -1,3 +1,6 @@
+import { Request } from 'express'
+import { JwtPayload } from 'jsonwebtoken'
+
 export interface IUser {
     fullName: string
     username: string
@@ -10,7 +13,13 @@ export interface IUser {
 export interface ITodo {
     title: string
     note: string
+    dueDate: Date
     isDone: boolean
-    author: IUser
+    owner: IUser
     createdOn: Date
+}
+
+export interface CustomRequest extends Request {
+    token: string | JwtPayload
+    userId: string
 }
