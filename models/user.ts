@@ -9,6 +9,7 @@ const userSchema = new Schema<IUser>({
     email: { type: String, required: true, unique: true, validate: (value: string) => validator.isEmail(value) },
     password: { type: String, required: true, select: false },
     todos: [{ type: Types.ObjectId, ref: 'Todo' }],
+    isVerified: { type: Boolean, default: false },
     createdOn: { type: Date, default: Date.now }
 })
 
