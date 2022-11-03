@@ -7,7 +7,7 @@ const userSchema = new Schema<IUser>({
     fullName: { type: String },
     username: { type: String, required: true, unique: true },
     email: { type: String, required: true, unique: true, validate: (value: string) => validator.isEmail(value) },
-    password: { type: String, required: true, select: false },
+    password: { type: String, required: true },
     todos: [{ type: Types.ObjectId, ref: 'Todo' }],
     isVerified: { type: Boolean, default: false },
     createdOn: { type: Date, default: Date.now }

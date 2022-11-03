@@ -23,11 +23,12 @@ const hbsConfig = {
 }
 
 export const transporter = nodemailer.createTransport({
-    host: 'smtp-relay.sendinblue.com',
-    port: 587,
-    secure: false,
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
+    requireTLS: true,
     auth: {
-        user: 'smsnmicheal@gmail.com',
-        pass: '12YXTfkEIhcMAt9H'
+        user: 'okunolaosamson@gmail.com',
+        pass: 'ttblrlozntdduvff'
     }
 })
